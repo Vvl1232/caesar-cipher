@@ -37,8 +37,14 @@ if st.button("🕵️‍♂️ Start Mission 🕵️‍♀️"):
     if direction == 'encode':
         result = encrypt(text, shift)
         st.write("🔒 **Encoded Text:**", result)
+        if st.button("🔄 Reset Mission"): 
+            st.rerun()
     elif direction == 'decode':
         result = decrypt(text, shift)
+        if st.button("🔄 Reset Mission"): 
+            st.rerun()
         st.write("🔓 **Decoded Text:**", result)
     else:
         st.write("❌ **Invalid direction. Please type 'encode' or 'decode'.**")
+
+
